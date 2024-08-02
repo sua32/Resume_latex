@@ -1,0 +1,301 @@
+%---- Required Packages and Functions ----
+ 
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.0cm, top=1cm, right=1cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Susana Alvarez} % Your Name
+\newcommand{\phone}{(479)685-2576}
+\newcommand{\emaila}{sua32@pitt.edu}
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{\dimexpr\linewidth-0.3cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} \\ 
+  {\raisebox{0.0\height}{\footnotesize \faPhone}\ +1\phone} & \href{https://github.com/sua32}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub}}\\
+  \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize 
+ \faEnvelope}\ {\emaila}}&\href{www.linkedin.com/in/susana-alvarez-58909a236}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn}}
+\end{tabularx}
+}
+
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Pittsburgh}{ }
+      {B.S. Digital Narrative and Interactive Design }{Expected Graduation April 2024}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {PNC}{Pittsburgh, PA}
+      {Product Innovation Intern (Content Communications Team)}{May - August 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Designed web UX designs tailored for the Hispanic Segment at PNC, intended for display on the company’s
+internal network}
+    \item {Collected and wrote content for the weekly newsletter}
+    \item {Help write and support various simulation SDKs}
+    \item {Created a presentation on PNC credit card rewards program, focusing on acquiring and retaining customers
+using goal setting and engagement. Incorporated elements of gamification and societal interaction}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {School of Computing and Information}{Pittsburgh, PA}
+      {Office Assistant}{2021-Present}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Assist with office upkeep}
+    \item {Arrange events}
+    \item {Aid in projects}
+    \item {Work on short term projects}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Technologies}{: Microsoft Excel, Powerpoint, Word, Mural, Snagit, Canva, Figma, Adobe Illustrator, Adobe Analytics, Canva, Pandas, Jupyter} \\
+     \textbf{Programming Languages }{: Python, Java, Javascript, HTML/CSS} \\
+     % \textbf{Soft Skills}{: } \\
+     \textbf{Field of Interest}{: UX, human-centered design, writing } \\
+     % \textbf{Hobbies}{: } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+% %-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Member, } % Position
+    {Women in Computer Science} %Club,Event
+    {2021-Present} %Tenure Period
+    % -work description in 1 line
+\resumePOR{Member, } % Position
+    {Latinx Student Association} %Club,Event
+    {2021-2023} %Tenure Period
+% -work description in 1 line
+\resumePOR{Member, } % Position
+    {Pitt Mock Trial} %Club,Event
+    {2022-2023} %Tenure Period
+% -work description in 1 line
+\resumePOR{Member, } % Position
+    {Minority Association in Computing} %Club,Event
+    {2022-Present} %Tenure Period
+% -work description in 1 line
+    
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+% \section{\textbf{Achievements}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{ } % Award
+%     {University of Pittsburgh} 
+%     {2023}
+% \resumePOR{ } % Award
+%     {} 
+%     {2020-2023} 
+% \resumePOR{ } % Award
+%     {} %Club,Event
+%     {} 
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+% 
+%-----------Relevant Coursework-----------------
+\section{\textbf{Relevant Coursework}}
+\vspace{-0.4mm}
+\begin{multicols}{2}
+\begin{itemize}
+    \item Innovation and Entrepreneurship in IT
+    \item Comparative Digital Privacies
+    \item Intro to Information, Systems, and Society
+    \item Narrative and Technology
+    \item Intro Computing for System Engineers
+    \item Intermediate Programming
+\end{itemize}
+\end{multicols}
+    
+
+% -----------PROJECTS-----------------
+\section{\textbf{Projects and Papers}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Green_Spaces} %Project Name
+      % {} %Project Name, Location Name
+      % {} %Event Dates
+      \resumeItemListStart
+        \item {Performed detailed data cleaning and organization in Excel to assess park amenities and outdoor features in diverse Pittsburgh neighborhoods}
+        \item {Utilized Python and GeoPandas through Jupyter Notebook to create a repository that analyzes various datasets to determine which neighborhood in Pittsburgh has the best Green Space}
+    \resumeItemListEnd
+    \vspace{-2.0mm}
+    
+    \resumeProject
+      {Prioritized To-Do list program} %Project Name
+      % {} %Project Name, Location Name
+      % {} %Event Dates
+      \resumeItemListStart
+        \item {Allowed users to organize tasks based on importance }
+        \item {Designed the interface using a GUI with java, including features such as rating scale and priority viewing}
+        \item { Utilized concepts such as enums, arrays, and GUI components to enhance the user experience }
+    \resumeItemListEnd
+    \vspace{-2.0mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-------------------------------------------
+\end{document}

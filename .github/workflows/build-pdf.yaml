@@ -1,0 +1,33 @@
+name: Build LaTeX to PDF
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up LaTeX environment
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y texlive-full
+
+    - name: Build LaTeX file
+      run: |
+        latexmk -pdf resume.tex -f
+
+    - name: Commit PDF file
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Build PDF from LaTeX source"
+        file_pattern: resume.pdf
+        branch: main
